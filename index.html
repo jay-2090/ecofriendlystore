@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Friendly Product Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">EcoStore</h1>
+            <!-- Hamburger menu for mobile screens -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#calculator">Carbon Calculator</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <h2>Welcome to Eco-Friendly Store</h2>
+        <p>Your one-stop shop for sustainable and eco-friendly products.</p>
+        <button class="shop-now-btn">Shop Now</button>
+    </section>
+
+    <!-- Product Section -->
+    <section id="products" class="product-section">
+        <h2>Our Products</h2>
+        <p>Explore a variety of eco-friendly products designed to reduce environmental impact.</p>
+        <div class="product-grid">
+            <div class="product-item animate">
+                <img src="images/product1.jpg" alt="Bamboo Toothbrush">
+                <h3>Bamboo Toothbrush</h3>
+                <p>₹150 - Made from natural bamboo, fully biodegradable.</p>
+            </div>
+            <div class="product-item animate">
+                <img src="images/product2.jpg" alt="Reusable Shopping Bag">
+                <h3>Reusable Shopping Bag</h3>
+                <p>₹200 - Durable, washable, and perfect for daily use.</p>
+            </div>
+            <div class="product-item animate">
+                <img src="images/product3.jpg" alt="Eco-Friendly Bottle">
+                <h3>Eco-Friendly Bottle</h3>
+                <p>₹500 - BPA-free, reusable, and eco-conscious.</p>
+            </div>
+            <div class="product-item animate">
+                <img src="images/product4.jpg" alt="Compostable Plates">
+                <h3>Compostable Plates</h3>
+                <p>₹300 - 100% compostable, made from plant fibers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carbon Footprint Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <h2>Carbon Footprint Calculator</h2>
+        <p>Estimate the environmental impact of your product use with our calculator.</p>
+
+        <form id="carbonForm">
+            <label for="usage">Product Usage Frequency (per week):</label>
+            <input type="number" id="usage" name="usage" min="1" required>
+
+            <label for="lifespan">Estimated Product Lifespan (in years):</label>
+            <input type="number" id="lifespan" name="lifespan" min="1" required>
+
+            <button type="button" onclick="calculateCarbon()">Calculate</button>
+            <p id="result"></p>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Have questions or need support? Get in touch with our eco-friendly team.</p>
+        <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 EcoStore. All rights reserved.</p>
+    </footer>
+    <!--Javascript Section-->>
+    <script src="script.js"></script>
+</body>
+
+</html>
